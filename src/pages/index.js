@@ -36,6 +36,12 @@ const cards = [
     link: '/awards',
     desc: '比赛经历、奖项与高光时刻的时间线记录。',
   },
+  {
+    icon: '🧭',
+    title: '人生历程',
+    link: '/journey',
+    desc: '求学、比赛与生活节点，按时间排好的一条路。',
+  },
 ];
 
 export default function Home() {

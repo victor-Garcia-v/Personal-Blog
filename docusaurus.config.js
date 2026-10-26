@@ -72,6 +72,7 @@ const config = {
           { to: '/blog', label: '博客', position: 'left' },
           { to: '/docs/intro', label: '知识库', position: 'left' },
           { to: '/awards', label: '闪亮时刻', position: 'left' },
+          { to: '/journey', label: '人生历程', position: 'left' },
           { to: '/about', label: '关于', position: 'left' },
           {
             href: 'https://github.com/victor-Garcia-v/Personal-Blog',
