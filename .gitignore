@@ -23,3 +23,4 @@ build_log.txt
 # temp build dirs
 /build_tmp
 /build_tmp*
+/build_old*
