@@ -19,3 +19,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 build_log.txt
+
+# temp build dirs
+/build_tmp
+/build_tmp*

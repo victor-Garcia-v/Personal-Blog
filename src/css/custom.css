@@ -57,7 +57,7 @@
   padding: 3.5rem 0 4.5rem;
 }
 
-/* 首页分类卡片：flex 布局，5 个卡片自动换行并居中 */
+/* 首页分类卡片：每行 3 个，五个模块自然排成 3 + 2 并居中 */
 .home-cards {
   display: flex;
   flex-wrap: wrap;
@@ -66,8 +66,22 @@
 }
 
 .home-cards .card-link {
-  flex: 1 1 300px;
-  max-width: 360px;
+  flex: 1 1 calc((100% - 3rem) / 3);
+  max-width: calc((100% - 3rem) / 3);
+}
+
+@media (max-width: 996px) {
+  .home-cards .card-link {
+    flex: 1 1 calc((100% - 1.5rem) / 2);
+    max-width: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-cards .card-link {
+    flex: 1 1 100%;
+    max-width: none;
+  }
 }
 
 .card-link {
