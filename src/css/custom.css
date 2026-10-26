@@ -1,4 +1,4 @@
-/* 首页 Hero：纽博格林封面背景 */
+/* 首页 Hero：封面背景 */
 .hero-banner {
   background-size: cover;
   background-position: center;
@@ -92,4 +92,109 @@
 
 .home-card p {
   color: var(--ifm-color-emphasis-700);
+}
+
+/* ============ 获奖历程页面 ============ */
+.awards-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.awards-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.awards-subtitle {
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+}
+
+.timeline {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 1rem 0 3rem;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.timeline-marker {
+  position: relative;
+  width: 18px;
+  flex: 0 0 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.55rem;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--ifm-color-primary);
+  box-shadow: 0 0 0 4px rgba(43, 88, 118, 0.15);
+  flex: 0 0 auto;
+  z-index: 1;
+}
+
+.timeline-line {
+  width: 2px;
+  flex: 1 1 auto;
+  background: var(--ifm-color-emphasis-300);
+  margin-top: 4px;
+}
+
+.timeline-content {
+  flex: 1 1 auto;
+  padding: 0 0 2rem 0.25rem;
+}
+
+.timeline-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.35rem;
+}
+
+.timeline-date {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.timeline-badge {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-800);
+}
+
+.timeline-title {
+  margin: 0 0 0.25rem;
+  font-size: 1.15rem;
+}
+
+.timeline-org {
+  margin: 0 0 0.35rem;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.9rem;
+}
+
+.timeline-desc {
+  margin: 0;
+  color: var(--ifm-color-emphasis-800);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .timeline-item {
+    gap: 0.75rem;
+  }
 }
