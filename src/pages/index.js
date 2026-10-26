@@ -13,7 +13,7 @@ const cards = [
     desc: 'CUDA 优化、并行程序设计、性能剖析与调优的踩坑与心得。',
   },
   {
-    icon: '🏁',
+    icon: '✈️',
     title: '旅行见闻',
     link: '/blog',
     desc: '自驾旅途中的风景、路线见闻与出行记录。',
@@ -29,6 +29,12 @@ const cards = [
     title: '知识库',
     link: '/docs/intro',
     desc: '系统整理的学习笔记与文档，长期更新。',
+  },
+  {
+    icon: '🏆',
+    title: '获奖历程',
+    link: '/awards',
+    desc: '比赛经历、奖项与荣誉的时间线记录。',
   },
 ];
 
@@ -63,19 +69,17 @@ export default function Home() {
       <main>
         <section className="section-cards">
           <div className="container">
-            <div className="row">
+            <div className="home-cards">
               {cards.map((c) => (
-                <div key={c.title} className="col col--3 col--md-6">
-                  <Link to={c.link} className="card-link">
-                    <div className="card home-card">
-                      <div className="home-card-icon">{c.icon}</div>
-                      <div className="card__body">
-                        <h3>{c.title}</h3>
-                        <p>{c.desc}</p>
-                      </div>
+                <Link key={c.title} to={c.link} className="card-link">
+                  <div className="card home-card">
+                    <div className="home-card-icon">{c.icon}</div>
+                    <div className="card__body">
+                      <h3>{c.title}</h3>
+                      <p>{c.desc}</p>
                     </div>
-                  </Link>
-                </div>
+                  </div>
+                </Link>
               ))}
             </div>
           </div>

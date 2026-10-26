@@ -57,10 +57,22 @@
   padding: 3.5rem 0 4.5rem;
 }
 
+/* 首页分类卡片：flex 布局，5 个卡片自动换行并居中 */
+.home-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.home-cards .card-link {
+  flex: 1 1 300px;
+  max-width: 360px;
+}
+
 .card-link {
   text-decoration: none;
-  display: block;
-  height: 100%;
+  display: flex;
 }
 
 .card-link:hover {
