@@ -1,0 +1,95 @@
+/* 首页 Hero：纽博格林封面背景 */
+.hero-banner {
+  background-size: cover;
+  background-position: center;
+  min-height: 480px;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 5rem 0;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-banner .hero__title,
+.hero-banner .hero__subtitle {
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-banner .hero__subtitle {
+  opacity: 0.95;
+}
+
+.hero-avatar {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  margin-bottom: 1.25rem;
+}
+
+.hero-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-btn-outline {
+  border-color: rgba(255, 255, 255, 0.8);
+  color: #fff;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.hero-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border-color: #fff;
+}
+
+/* 分类卡片 */
+.section-cards {
+  padding: 3.5rem 0 4.5rem;
+}
+
+.card-link {
+  text-decoration: none;
+  display: block;
+  height: 100%;
+}
+
+.card-link:hover {
+  text-decoration: none;
+}
+
+.home-card {
+  height: 100%;
+  text-align: center;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.home-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.home-card-icon {
+  font-size: 2.25rem;
+  padding-top: 1.25rem;
+}
+
+.home-card h3 {
+  color: var(--ifm-font-color-base);
+}
+
+.home-card p {
+  color: var(--ifm-color-emphasis-700);
+}
