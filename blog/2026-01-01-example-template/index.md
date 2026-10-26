@@ -1,7 +1,7 @@
 ---
 slug: example-post        # URL 路径，可选，默认用文件名
 title: 文章标题（示例模板，发布前替换或删除本文）
-authors: [NeverGpDzy]
+authors: [tianyulai]
 tags: [随笔]              # 可选标签，自由填写
 date: 2026-01-01          # 文章日期
 ---
@@ -18,7 +18,7 @@ date: 2026-01-01          # 文章日期
 ```cpp
 // 支持语法高亮：cpp / python / bash / json 等
 #include <cstdio>
-int main() { printf("Hello, NeverGpDzy!\n"); return 0; }
+int main() { printf("Hello, tianyulai!\n"); return 0; }
 ```
 
 ## 图片

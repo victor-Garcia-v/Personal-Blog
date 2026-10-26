@@ -44,7 +44,7 @@ export default function Home() {
         style={{ backgroundImage: `url(${coverUrl})` }}>
         <div className="hero-overlay">
           <div className="container">
-            <img className="hero-avatar" src={avatarUrl} alt="NeverGpDzy 头像" />
+            <img className="hero-avatar" src={avatarUrl} alt="tianyulai 头像" />
             <h1 className="hero__title">{siteConfig.title}</h1>
             <p className="hero__subtitle">{siteConfig.tagline}</p>
             <div className="hero-buttons">

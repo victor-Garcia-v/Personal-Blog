@@ -8,7 +8,7 @@ const darkCodeTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "NeverGpDzy's Blog",
+  title: "tianyulai",
   tagline: '记录HPC学习笔记&旅行见闻&兴趣爱好&生活感悟',
   favicon: 'img/avatar.webp',
 
@@ -38,13 +38,13 @@ const config = {
         },
         blog: {
           showReadingTime: true,
-          blogTitle: "NeverGpDzy's Blog",
+          blogTitle: "tianyulai",
           blogDescription: '记录HPC学习笔记&旅行见闻&兴趣爱好&生活感悟',
           feedOptions: {
             type: ['rss', 'atom'],
-            title: "NeverGpDzy's Blog",
+            title: "tianyulai",
             description: '记录HPC学习笔记&旅行见闻&兴趣爱好&生活感悟',
-            copyright: `Copyright © ${new Date().getFullYear()} NeverGpDzy`,
+            copyright: `Copyright © ${new Date().getFullYear()} tianyulai`,
             language: 'zh-Hans',
           },
           editUrl:
@@ -62,9 +62,9 @@ const config = {
     ({
       image: 'img/cover.webp',
       navbar: {
-        title: 'NeverGpDzy',
+        title: 'tianyulai',
         logo: {
-          alt: 'NeverGpDzy 头像',
+          alt: 'tianyulai 头像',
           src: 'img/avatar.webp',
         },
         items: [
@@ -81,7 +81,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} NeverGpDzy. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} tianyulai. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

@@ -1,4 +1,4 @@
-# NeverGpDzy's Blog
+# tianyulai
 
 个人博客，基于 [Docusaurus v3](https://docusaurus.io) 构建。
 
@@ -35,7 +35,7 @@ npm run serve    # 本地预览 build 产物
 ---
 slug: my-post
 title: 文章标题
-authors: [NeverGpDzy]
+authors: [tianyulai]
 tags: [HPC]
 date: 2026-10-26
 ---
