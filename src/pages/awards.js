@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '@theme/Layout';
 
 // ============================================================
-// 获奖历程数据：按时间倒序排列（最新的写在最上面）
+// 闪亮时刻数据：按时间倒序排列（最新的写在最上面）
 // 直接修改下面的数组即可，也可以继续添加任意多条
 // ============================================================
 const awards = [
@@ -34,12 +34,12 @@ const awards = [
 
 export default function Awards() {
   return (
-    <Layout title="获奖历程" description="tianyulai 的获奖与荣誉记录">
+    <Layout title="闪亮时刻" description="tianyulai 的闪亮时刻记录">
       <main className="container margin-vert--lg">
         <div className="awards-header">
-          <h1>🏆 获奖历程</h1>
+          <h1>🏆 闪亮时刻</h1>
           <p className="awards-subtitle">
-            记录一路走来的比赛与荣誉，持续更新中。
+            记录一路走来的高光时刻与荣誉，持续更新中。
           </p>
         </div>
 
