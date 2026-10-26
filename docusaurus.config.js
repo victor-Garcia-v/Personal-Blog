@@ -80,7 +80,7 @@ const config = {
               { to: '/blog', label: '全部文章' },
               { to: '/hpc', label: 'HPC 学习笔记' },
               { to: '/travel', label: '旅行见闻' },
-              { to: '/hobbies', label: '兴趣爱好' },
+              { to: '/hobbies', label: '随心记' },
             ],
           },
           { to: '/docs/intro', label: '知识库', position: 'left' },

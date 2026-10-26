@@ -3,7 +3,7 @@ slug: shenzhen-songshanhu
 title: 深圳松山湖
 authors: [tianyulai]
 tags: [旅行, 摄影]
-section: 旅行见闻        # 所属板块：决定文章出现在哪个板块页（HPC 学习笔记 / 旅行见闻 / 兴趣爱好）
+section: 旅行见闻        # 所属板块：决定文章出现在哪个板块页（HPC 学习笔记 / 旅行见闻 / 随心记）
 description: 松山湖的欧式小镇半日游：红砖城堡、钟楼、喷泉广场和绕镇的小火车。
 ---
 

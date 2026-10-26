@@ -4,11 +4,11 @@ import SectionPage from '@site/src/components/SectionPage';
 export default function Hobbies() {
   return (
     <SectionPage
-      icon="📷"
-      title="兴趣爱好"
-      subtitle="摄影、烹饪，用镜头定格风景，用灶台治愈生活。"
-      section="兴趣爱好"
-      description="tianyulai 的兴趣爱好"
+      icon="📝"
+      title="随心记"
+      subtitle="随手写下的片段：摄影、烹饪、读书与生活里的小碎片。"
+      section="随心记"
+      description="tianyulai 的随心记"
     />
   );
 }

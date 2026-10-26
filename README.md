@@ -37,7 +37,7 @@ npm run serve    # 本地预览 build 产物
 | --- | --- | --- |
 | HPC 学习笔记 | `/hpc` | `section: HPC 学习笔记` |
 | 旅行见闻 | `/travel` | `section: 旅行见闻` |
-| 兴趣爱好 | `/hobbies` | `section: 兴趣爱好` |
+| 随心记 | `/hobbies` | `section: 随心记` |
 
 `/blog` 是全部文章的总列表（不受板块限制）。不写 `section` 的文章只会出现在 `/blog`，不会进任何板块。
 
