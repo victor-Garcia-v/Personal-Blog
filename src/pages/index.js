@@ -9,19 +9,19 @@ const cards = [
   {
     icon: '⚡',
     title: 'HPC 学习笔记',
-    link: '/blog',
+    link: '/hpc',
     desc: 'CUDA 优化、并行程序设计、性能剖析与调优的踩坑与心得。',
   },
   {
     icon: '✈️',
     title: '旅行见闻',
-    link: '/blog',
+    link: '/travel',
     desc: '自驾旅途中的风景、路线见闻与出行记录。',
   },
   {
     icon: '📷',
     title: '兴趣爱好',
-    link: '/blog',
+    link: '/hobbies',
     desc: '摄影、烹饪，用镜头定格风景，用灶台治愈生活。',
   },
   {

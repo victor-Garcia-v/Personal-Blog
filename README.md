@@ -20,12 +20,26 @@ npm run serve    # 本地预览 build 产物
 ```
 ├── blog/                # 博客文章（Markdown，一个文件夹一篇）
 ├── docs/                # 知识库文档
-├── src/pages/           # 自定义页面（首页 / 关于页）
+├── plugins/blog-sections/ # 本地插件：扫描 blog 目录，把文章按 section 分给各板块页
+├── src/components/      # 板块页组件（SectionPage / SectionPosts）
+├── src/pages/           # 自定义页面（首页 / 关于 / 闪亮时刻 / 人生历程 / 各板块页）
 ├── src/css/             # 全局样式
 ├── static/img/          # 静态资源（头像 / 封面图）
 ├── docusaurus.config.js # 站点配置（站名 / RSS / 导航等）
 └── .github/workflows/   # GitHub Actions 自动部署
 ```
+
+## 板块划分
+
+博客按 `section` 字段分成三个板块，各板块页只显示自己的文章，互不串台：
+
+| 板块 | 页面地址 | front matter 写法 |
+| --- | --- | --- |
+| HPC 学习笔记 | `/hpc` | `section: HPC 学习笔记` |
+| 旅行见闻 | `/travel` | `section: 旅行见闻` |
+| 兴趣爱好 | `/hobbies` | `section: 兴趣爱好` |
+
+`/blog` 是全部文章的总列表（不受板块限制）。不写 `section` 的文章只会出现在 `/blog`，不会进任何板块。
 
 ## 写新文章
 
@@ -38,6 +52,8 @@ title: 文章标题
 authors: [tianyulai]
 tags: [HPC]
 date: 2026-10-26
+section: HPC 学习笔记   # 必填，决定文章进入哪个板块
+description: 一句话摘要，显示在板块列表卡片上
 ---
 
 正文……

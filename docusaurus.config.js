@@ -27,6 +27,9 @@ const config = {
     locales: ['zh-Hans'],
   },
 
+  // 本地插件：扫描 blog 目录，把文章按 section 字段提供给各板块页
+  plugins: [require.resolve('./plugins/blog-sections')],
+
   presets: [
     [
       'classic',
@@ -69,7 +72,17 @@ const config = {
         },
         items: [
           { to: '/', label: '首页', position: 'left' },
-          { to: '/blog', label: '博客', position: 'left' },
+          {
+            type: 'dropdown',
+            label: '博客',
+            position: 'left',
+            items: [
+              { to: '/blog', label: '全部文章' },
+              { to: '/hpc', label: 'HPC 学习笔记' },
+              { to: '/travel', label: '旅行见闻' },
+              { to: '/hobbies', label: '兴趣爱好' },
+            ],
+          },
           { to: '/docs/intro', label: '知识库', position: 'left' },
           { to: '/awards', label: '闪亮时刻', position: 'left' },
           { to: '/journey', label: '人生历程', position: 'left' },
