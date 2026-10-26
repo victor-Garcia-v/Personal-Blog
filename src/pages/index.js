@@ -34,8 +34,8 @@ const cards = [
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
-  const coverUrl = useBaseUrl('/img/cover.webp');
-  const avatarUrl = useBaseUrl('/img/avatar.webp');
+  const coverUrl = useBaseUrl('/img/cover.svg');
+  const avatarUrl = useBaseUrl('/img/avatar.svg');
 
   return (
     <Layout title="首页" description={siteConfig.tagline}>

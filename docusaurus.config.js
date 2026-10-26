@@ -10,7 +10,7 @@ const darkCodeTheme = themes.dracula;
 const config = {
   title: "tianyulai",
   tagline: '记录HPC学习笔记&旅行见闻&兴趣爱好&生活感悟',
-  favicon: 'img/avatar.webp',
+  favicon: 'img/avatar.svg',
 
   // 线上部署地址（阿里云 OSS + ESA）
   url: 'https://nevergpdzy.com',
@@ -60,12 +60,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/cover.webp',
+      image: 'img/cover.svg',
       navbar: {
         title: 'tianyulai',
         logo: {
           alt: 'tianyulai 头像',
-          src: 'img/avatar.webp',
+          src: 'img/avatar.svg',
         },
         items: [
           { to: '/', label: '首页', position: 'left' },
