@@ -10,8 +10,8 @@
 //
 // 注意：不填 Key 页面也能正常用，只是地图区域会显示一条提示。
 // 请勿使用别人的 Key —— 每个站点都应使用自己在高德申请的 Key。
-export const AMAP_KEY = '请到高德开放平台申请自己的Key并替换此占位符';
-export const AMAP_SECURITY_JSCODE = '请填写Key对应的安全密钥securityJsCode';
+export const AMAP_KEY = '7b24fd6f9c396303512b89d621686877';
+export const AMAP_SECURITY_JSCODE = '0eeb104219a054227a7f78746b67fdb2';
 
 // ---- 出行统计（按真实情况填写，0 或留空则不显示对应卡片）----
 export const travelStats = {
