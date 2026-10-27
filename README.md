@@ -41,6 +41,26 @@ npm run serve    # 本地预览 build 产物
 
 `/blog` 是全部文章的总列表（不受板块限制）。不写 `section` 的文章只会出现在 `/blog`，不会进任何板块。
 
+## 闪亮时刻的陈列柜
+
+`/awards` 页面顶部有一个「陈列柜」，用来放奖状、奖杯、奖牌，以及一些有意义的物件（纪念品、票根、合影等）。
+
+加一张照片只要两步：
+
+1. 把图片放进 `static/img/showcase/`（jpg / png / webp 都行）
+2. 在 `src/pages/awards.js` 顶部的 `showcase` 数组里加一条：
+
+```js
+{
+  img: '/img/showcase/pac-2026-cert.jpg', // 图片路径，以 /img/showcase/ 开头
+  title: 'PAC 2026 三等奖证书',            // 卡片标题
+  date: '2026.10',                        // 可选，显示在标题上方
+  caption: '第十三届全国并行应用挑战赛',    // 可选，一句话说明
+}
+```
+
+卡片按网格自动排列，点击可查看原图。数组为空时页面会显示占位提示。
+
 ## 写新文章
 
 在 `blog/` 下新建文件夹（或 md 文件），文件名格式 `YYYY-MM-DD-标题`，头部写好 front matter：
