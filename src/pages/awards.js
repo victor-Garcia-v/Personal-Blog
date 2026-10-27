@@ -1,5 +1,24 @@
 import React from 'react';
 import Layout from '@theme/Layout';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+// ============================================================
+// 陈列柜：放奖状 / 奖杯 / 奖牌，以及一些有意义的物件
+// （纪念品、票根、徽章、合影…… 只要是值得留着的都能放）
+// 用法：
+//   1. 把照片放进 static/img/showcase/ 目录（jpg / png / webp 都行）
+//   2. 在下面的 showcase 数组里加一条，img 填 /img/showcase/文件名
+//   3. date 写时间，caption 写一句说明（都可选）
+// 没有内容时页面会显示「陈列柜还是空的」的提示
+// ============================================================
+const showcase = [
+  // {
+  //   img: '/img/showcase/pac-2026-cert.jpg',
+  //   title: 'PAC 2026 三等奖证书',
+  //   date: '2026.10',
+  //   caption: '第十三届全国并行应用挑战赛',
+  // },
+];
 
 // ============================================================
 // 闪亮时刻数据：按时间倒序排列（最新的写在最上面）
@@ -28,6 +47,22 @@ const awards = [
   // ------------------------------------------------------------
 ];
 
+function ShowcaseItem({ item }) {
+  const url = useBaseUrl(item.img);
+  return (
+    <a className="showcase-item" href={url} target="_blank" rel="noreferrer">
+      <div className="showcase-photo">
+        <img src={url} alt={item.title} loading="lazy" />
+      </div>
+      <div className="showcase-caption">
+        {item.date && <span className="showcase-date">{item.date}</span>}
+        <span className="showcase-title">{item.title}</span>
+        {item.caption && <span className="showcase-desc">{item.caption}</span>}
+      </div>
+    </a>
+  );
+}
+
 export default function Awards() {
   return (
     <Layout title="闪亮时刻" description="tianyulai 的闪亮时刻记录">
@@ -38,6 +73,30 @@ export default function Awards() {
             记录一路走来的高光时刻与荣誉，持续更新中。
           </p>
         </div>
+
+        <section className="showcase">
+          <h2 className="showcase-heading">🪞 陈列柜</h2>
+          <p className="showcase-hint">
+            奖状、奖杯、奖牌，还有一些有意义的物件 —— 拍下来放在这里。
+          </p>
+
+          {showcase.length > 0 ? (
+            <div className="showcase-grid">
+              {showcase.map((item, i) => (
+                <ShowcaseItem item={item} key={`${item.img}-${i}`} />
+              ))}
+            </div>
+          ) : (
+            <div className="showcase-empty">
+              <p>陈列柜还是空的。</p>
+              <p className="showcase-empty-hint">
+                把奖状 / 奖杯 / 纪念物的照片放到 <code>static/img/showcase/</code> 目录，
+                然后在 <code>src/pages/awards.js</code> 顶部的 <code>showcase</code>{' '}
+                数组里加一条记录，照片就会出现在这里。
+              </p>
+            </div>
+          )}
+        </section>
 
         <div className="timeline">
           {awards.map((a, i) => (
