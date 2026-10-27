@@ -446,3 +446,242 @@
 .showcase-photo.is-portrait {
   aspect-ratio: 210 / 297;
 }
+
+/* ===================== 足迹页（旅行见闻） ===================== */
+
+.fp-hero {
+  background:
+    linear-gradient(180deg, rgba(250, 246, 238, 0.4), rgba(250, 246, 238, 0.95)),
+    repeating-linear-gradient(45deg, rgba(196, 154, 108, 0.06) 0 12px, transparent 12px 24px),
+    #faf6ee;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  padding: 2.5rem 0 2rem;
+}
+
+.fp-hero-title {
+  font-size: 2.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.fp-hero-sub {
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 1.5rem;
+}
+
+.fp-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.fp-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #fff;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  padding: 0.55rem 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.fp-stat-icon {
+  font-size: 1.2rem;
+}
+
+.fp-stat-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.fp-stat-label {
+  font-size: 0.78rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.fp-stat-value {
+  font-size: 1.05rem;
+}
+
+.fp-stat-note {
+  font-size: 0.72rem;
+  color: var(--ifm-color-emphasis-500);
+}
+
+.fp-section {
+  margin-bottom: 2.5rem;
+}
+
+.fp-section-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+/* ---- 地图 ---- */
+
+.fp-map-wrap {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.fp-map {
+  width: 100%;
+  height: 420px;
+}
+
+.fp-map-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  background:
+    linear-gradient(180deg, rgba(250, 246, 238, 0.6), rgba(250, 246, 238, 0.9)),
+    repeating-linear-gradient(45deg, rgba(196, 154, 108, 0.07) 0 14px, transparent 14px 28px);
+  color: var(--ifm-color-emphasis-700);
+}
+
+.fp-map-fallback code {
+  margin: 0 0.2rem;
+}
+
+.fp-map-attribution {
+  position: absolute;
+  right: 8px;
+  bottom: 6px;
+  z-index: 1;
+  font-size: 0.7rem;
+  color: #6b6b6b;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 1px 6px;
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+/* 高德自定义点标记（内容是注入地图 DOM 的字符串，不走 CSS 变量） */
+.fp-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.fp-marker-name {
+  white-space: nowrap;
+  font-size: 12px;
+  color: #8c5a2b;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #e3c9a8;
+  border-radius: 6px;
+  padding: 0 6px;
+  line-height: 18px;
+}
+
+.fp-marker-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d0662f;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px rgba(208, 102, 47, 0.35);
+}
+
+/* ---- 旅行故事卡片 ---- */
+
+.fp-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.1rem;
+}
+
+.fp-card-link {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.fp-card {
+  height: 100%;
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fp-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.fp-card-cover {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.fp-card-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.fp-card-city {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 0.75rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 999px;
+  padding: 2px 10px;
+  backdrop-filter: blur(4px);
+}
+
+.fp-card-body {
+  padding: 0.9rem 1rem 1.1rem;
+}
+
+.fp-card-title {
+  font-size: 1.05rem;
+  margin: 0 0 0.4rem;
+}
+
+.fp-card-desc {
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ---- 暗色模式 ---- */
+
+[data-theme='dark'] .fp-hero {
+  background:
+    linear-gradient(180deg, rgba(36, 34, 30, 0.5), rgba(36, 34, 30, 0.95)),
+    repeating-linear-gradient(45deg, rgba(196, 154, 108, 0.08) 0 12px, transparent 12px 24px),
+    #242220;
+  border-bottom-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .fp-stat {
+  background: var(--ifm-background-elevated, #2b2a27);
+}
+
+@media (max-width: 600px) {
+  .fp-map {
+    height: 300px;
+  }
+
+  .fp-hero-title {
+    font-size: 1.7rem;
+  }
+}

@@ -24,3 +24,4 @@ build_log.txt
 /build_tmp
 /build_tmp*
 /build_old*
+build_fp.log
