@@ -441,3 +441,8 @@
     gap: 1rem;
   }
 }
+
+/* 竖版（证书 / 奖状）按 A4 比例展示，不裁切内容 */
+.showcase-photo.is-portrait {
+  aspect-ratio: 210 / 297;
+}

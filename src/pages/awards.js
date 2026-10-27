@@ -12,12 +12,13 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 // 没有内容时页面会显示「陈列柜还是空的」的提示
 // ============================================================
 const showcase = [
-  // {
-  //   img: '/img/showcase/pac-2026-cert.jpg',
-  //   title: 'PAC 2026 三等奖证书',
-  //   date: '2026.10',
-  //   caption: '第十三届全国并行应用挑战赛',
-  // },
+  {
+    img: '/img/showcase/pac-2026-cert.png',
+    title: 'PAC 2026 三等奖证书',
+    date: '2026.10',
+    caption: '第十三届全国并行应用挑战赛 · 优化组决赛三等奖（梦溪湖二队）',
+    portrait: true,          // 竖版照片（证书 / 奖状）加这一行，卡片按 A4 比例显示不被裁切
+  },
 ];
 
 // ============================================================
@@ -51,7 +52,7 @@ function ShowcaseItem({ item }) {
   const url = useBaseUrl(item.img);
   return (
     <a className="showcase-item" href={url} target="_blank" rel="noreferrer">
-      <div className="showcase-photo">
+      <div className={`showcase-photo${item.portrait ? ' is-portrait' : ''}`}>
         <img src={url} alt={item.title} loading="lazy" />
       </div>
       <div className="showcase-caption">
