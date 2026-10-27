@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useGlobalData from '@docusaurus/useGlobalData';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import FootprintsMap from '@site/src/components/FootprintsMap';
 import { travelStats, storyExtras } from '@site/src/data/travelFootprints';
 
@@ -35,6 +36,27 @@ function StatCard({ icon, label, value, note }) {
         {note && <span className="fp-stat-note">{note}</span>}
       </div>
     </div>
+  );
+}
+
+// 单独拆成组件，才能用 useBaseUrl 处理子路径部署（GitHub Pages 的 /仓库名/ 前缀）
+function StoryCard({ story }) {
+  const cover = useBaseUrl(story.cover);
+  return (
+    <Link to={story.permalink} className="fp-card-link">
+      <article className="fp-card">
+        <div className="fp-card-cover">
+          <img src={cover} alt={story.title} loading="lazy" />
+          <span className="fp-card-city">📍 {story.city}</span>
+        </div>
+        <div className="fp-card-body">
+          <h3 className="fp-card-title">{story.title}</h3>
+          {story.description && (
+            <p className="fp-card-desc">{story.description}</p>
+          )}
+        </div>
+      </article>
+    </Link>
   );
 }
 
@@ -107,23 +129,7 @@ export default function Travel() {
             ) : (
               <div className="fp-cards">
                 {configured.map((s) => (
-                  <Link
-                    key={s.permalink}
-                    to={s.permalink}
-                    className="fp-card-link">
-                    <article className="fp-card">
-                      <div className="fp-card-cover">
-                        <img src={s.cover} alt={s.title} loading="lazy" />
-                        <span className="fp-card-city">📍 {s.city}</span>
-                      </div>
-                      <div className="fp-card-body">
-                        <h3 className="fp-card-title">{s.title}</h3>
-                        {s.description && (
-                          <p className="fp-card-desc">{s.description}</p>
-                        )}
-                      </div>
-                    </article>
-                  </Link>
+                  <StoryCard story={s} key={s.permalink} />
                 ))}
               </div>
             )}

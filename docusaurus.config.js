@@ -12,9 +12,10 @@ const config = {
   tagline: '记录HPC学习笔记&旅行见闻&兴趣爱好&生活感悟',
   favicon: 'img/avatar.svg',
 
-  // 线上部署地址（阿里云 OSS + ESA）
-  url: 'https://nevergpdzy.com',
-  baseUrl: '/',
+  // 线上部署地址（GitHub Pages：https://victor-Garcia-v.github.io/Personal-Blog/）
+  // 以后绑定自己的域名时，把 url 改成域名、baseUrl 改成 '/' 即可
+  url: 'https://victor-Garcia-v.github.io',
+  baseUrl: '/Personal-Blog/',
 
   organizationName: 'victor-Garcia-v', // GitHub 用户名
   projectName: 'Personal-Blog', // GitHub 仓库名
