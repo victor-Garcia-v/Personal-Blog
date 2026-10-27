@@ -95,6 +95,7 @@
 }
 
 .home-card {
+  width: 100%; /* flex 子项默认按内容收缩，必须显式撑满，否则各卡宽度不一致 */
   height: 100%;
   min-height: 200px; /* 所有模块统一高度 */
   display: flex;
